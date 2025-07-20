@@ -58,8 +58,8 @@ const HomePage = () => {
       <div className="main-bg-overlay" />
       <section className="hero">
         <div className="hero-background" />
-        <img src={`/images/logo-icon.png`} alt="Nagpur Murum Depot Logo" className="logo" />
-        <h1 className="title">Nagpur Murum Depot</h1>
+        <img src={`/images/logo-icon.png`} alt="Civic Build Mart Logo" className="logo" />
+        <h1 className="title">Civic Build Mart</h1>
         <p className="subtitle">Reliable Earth Filling & Construction Material Supply</p>
         <div className="badges">
           <span className="badge fast">🚚 Fast Delivery</span>
@@ -136,7 +136,7 @@ const HomePage = () => {
       </section>
 
       <footer className="footer">
-        &copy; {new Date().getFullYear()} Nagpur Murum Depot. All rights reserved.
+        &copy; {new Date().getFullYear()} Civic Build Mart. All rights reserved.
       </footer>
 
       {/* ✅ Improved Component-Specific CSS */}
