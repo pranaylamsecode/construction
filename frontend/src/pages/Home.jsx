@@ -22,12 +22,12 @@ const SERVICES = [
 // Use public folder path for images (assuming images are in public/images)
 const FLEET = [
   {
-    src: '/images/trolley-image.jpg',
+    src: 'src/style/images/trolley-image.jpg',
     alt: 'Tractor Trolley',
     caption: 'Tractor Trolley – For flexible, smaller deliveries',
   },
   {
-    src: '/images/tipper-image.jpg',
+    src: 'src/style/images/tipper-image.jpg',
     alt: 'Tipper Truck',
     caption: 'Tipper Truck – For bulk, high-volume transport',
   },
@@ -51,7 +51,7 @@ const HomePage = () => {
     <main className="homepage">
       <section className="hero">
         <div className="hero-background" />
-        <img src="/images/logo-icon.png" alt="Nagpur Murum Depot Logo" className="logo" />
+        <img src="src/style/images/logo-icon.png" alt="Nagpur Murum Depot Logo" className="logo" />
         <h1 className="title">Nagpur Murum Depot</h1>
         <p className="subtitle">Reliable Earth Filling & Construction Material Supply</p>
         <div className="badges">
@@ -113,7 +113,7 @@ const HomePage = () => {
                   <img
                     src={vehicle.src}
                     alt={vehicle.alt}
-                    onError={handleImgError}
+                    /* onError={handleImgError} */
                   />
                 ) : (
                   <img src={vehicle.src} alt={vehicle.alt} />
@@ -153,7 +153,10 @@ const HomePage = () => {
         }
         .hero-background {
           position: absolute;
-          top: 0; left: 0; right: 0; bottom: 0;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
           background: linear-gradient(120deg, #f97316 0%, #fff 100%);
           opacity: 0.08;
           z-index: 0;
@@ -189,7 +192,7 @@ const HomePage = () => {
           font-size: 1rem;
           color: white;
           font-weight: 600;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
         .fast {
           background-color: #f97316;
@@ -218,7 +221,7 @@ const HomePage = () => {
           background: #fafafa;
           flex: 1 1 320px;
           min-width: 270px;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
         }
 
         .section-title {
@@ -279,7 +282,7 @@ const HomePage = () => {
           background: #fff;
           min-width: 240px;
           max-width: 320px;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
 
         .fleet-image img {
@@ -319,8 +322,10 @@ const HomePage = () => {
           font-size: 1.1rem;
           font-weight: 700;
           cursor: pointer;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-          transition: background 0.2s, transform 0.1s;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+          transition:
+            background 0.2s,
+            transform 0.1s;
         }
         .cta-button:hover {
           background: linear-gradient(90deg, #ea580c 60%, #f59e42 100%);
