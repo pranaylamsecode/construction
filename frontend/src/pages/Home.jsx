@@ -22,12 +22,12 @@ const SERVICES = [
 // Use public folder path for images (images should be in public/images)
 const FLEET = [
   {
-    src: '../src/style/images/trolleyimage.png',
+    src: '/images/trolleyimage.png',
     alt: 'Tractor Trolley',
     caption: 'Tractor Trolley – For flexible, smaller deliveries',
   },
   {
-    src: '../src/style/images/tipperimage.png',
+    src: '/images/tipperimage.png',
     alt: 'Tipper Truck',
     caption: 'Tipper Truck – For bulk, high-volume transport',
   },
@@ -58,11 +58,7 @@ const HomePage = () => {
       <div className="main-bg-overlay" />
       <section className="hero">
         <div className="hero-background" />
-        <img
-          src={`../src/style/images/logo-icon.png`}
-          alt="Nagpur Murum Depot Logo"
-          className="logo"
-        />
+        <img src={`/images/logo-icon.png`} alt="Nagpur Murum Depot Logo" className="logo" />
         <h1 className="title">Nagpur Murum Depot</h1>
         <p className="subtitle">Reliable Earth Filling & Construction Material Supply</p>
         <div className="badges">
