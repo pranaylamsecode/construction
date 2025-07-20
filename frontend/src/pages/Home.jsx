@@ -22,21 +22,22 @@ const SERVICES = [
 // Use public folder path for images (images should be in public/images)
 const FLEET = [
   {
-    src: '/src/style/images/trolleyimage.png',
+    src: '../src/style/images/trolleyimage.png',
     alt: 'Tractor Trolley',
     caption: 'Tractor Trolley – For flexible, smaller deliveries',
   },
   {
-    src: '/src/style/images/tipperimage.png',
+    src: '../src/style/images/tipperimage.png',
     alt: 'Tipper Truck',
     caption: 'Tipper Truck – For bulk, high-volume transport',
   },
 ];
 
 // Use import.meta.env for Vite or fallback to empty string
-const FRONTEND_SERVER = typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_FRONTEND_SERVER
-  ? import.meta.env.VITE_FRONTEND_SERVER
-  : '';
+const FRONTEND_SERVER =
+  typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_FRONTEND_SERVER
+    ? import.meta.env.VITE_FRONTEND_SERVER
+    : '';
 
 const HomePage = () => {
   const handleQuoteClick = () => {
@@ -58,7 +59,7 @@ const HomePage = () => {
       <section className="hero">
         <div className="hero-background" />
         <img
-          src={`${FRONTEND_SERVER}/src/style/images/logo-icon.png`}
+          src={`../src/style/images/logo-icon.png`}
           alt="Nagpur Murum Depot Logo"
           className="logo"
         />
@@ -120,11 +121,7 @@ const HomePage = () => {
             <div key={idx} className="fleet-card">
               <div className="fleet-image">
                 {vehicle.alt === 'Tractor Trolley' ? (
-                  <img
-                    src={`${FRONTEND_SERVER}${vehicle.src}`}
-                    alt={vehicle.alt}
-                    onError={handleImgError}
-                  />
+                  <img src={`${vehicle.src}`} alt={vehicle.alt} onError={handleImgError} />
                 ) : (
                   <img src={`${FRONTEND_SERVER}${vehicle.src}`} alt={vehicle.alt} />
                 )}
@@ -185,7 +182,7 @@ const HomePage = () => {
           right: 0;
           bottom: 0;
           background: linear-gradient(120deg, #f97316 0%, #fff 100%);
-          opacity: 0.10;
+          opacity: 0.1;
           z-index: 0;
           border-radius: 0 0 32px 32px;
         }
@@ -199,7 +196,7 @@ const HomePage = () => {
           object-fit: contain;
           background: #fff;
           border-radius: 50%;
-          box-shadow: 0 2px 12px 0 rgba(249, 115, 22, 0.10);
+          box-shadow: 0 2px 12px 0 rgba(249, 115, 22, 0.1);
           border: 3px solid #f97316;
         }
         .title {
@@ -208,7 +205,9 @@ const HomePage = () => {
           letter-spacing: 1.5px;
           margin-bottom: 0.3rem;
           color: #f97316;
-          text-shadow: 0 2px 8px #fff7, 0 1px 0 #fbbf24;
+          text-shadow:
+            0 2px 8px #fff7,
+            0 1px 0 #fbbf24;
         }
         .subtitle {
           font-size: 1.3rem;
@@ -310,7 +309,9 @@ const HomePage = () => {
           text-decoration: none;
           font-weight: bold;
           font-size: 1.05rem;
-          transition: background 0.2s, transform 0.1s;
+          transition:
+            background 0.2s,
+            transform 0.1s;
           box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
         }
         .contact-buttons a:hover {
