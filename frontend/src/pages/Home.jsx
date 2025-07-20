@@ -3,7 +3,7 @@ import React from 'react';
 // Correct image paths for public folder usage
 const CONTACT = {
   name: 'Swapnil Bambal',
-  phone: '+91 9850587750',
+  phone: '+919850587750',
   email: 'swapnilbambal1@gmail.com',
   locations: ['Wadi', 'Hingna', 'Kalmeshwar', 'Katol', 'Saoner'],
 };
