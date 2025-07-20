@@ -33,6 +33,17 @@ const FLEET = [
   },
 ];
 
+// How to use environment variables in React:
+// 1. Create a file named `.env` in your project root.
+// 2. Add your variable like: REACT_APP_FRONTEND_SERVER=https://your-server.com
+// 3. Restart your dev server after editing .env.
+// 4. Access it in code as: import.meta.env.VITE_FRONTEND_SERVER
+
+// Use import.meta.env for Vite or fallback to empty string
+const FRONTEND_SERVER = typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_FRONTEND_SERVER
+  ? import.meta.env.VITE_FRONTEND_SERVER
+  : '';
+
 const HomePage = () => {
   const handleQuoteClick = () => {
     window.open(
@@ -51,7 +62,11 @@ const HomePage = () => {
     <main className="homepage">
       <section className="hero">
         <div className="hero-background" />
-        <img src="/src/style/images/logo-icon.png" alt="Nagpur Murum Depot Logo" className="logo" />
+        <img
+          src={`${FRONTEND_SERVER}/src/style/images/logo-icon.png`}
+          alt="Nagpur Murum Depot Logo"
+          className="logo"
+        />
         <h1 className="title">Nagpur Murum Depot</h1>
         <p className="subtitle">Reliable Earth Filling & Construction Material Supply</p>
         <div className="badges">
@@ -110,9 +125,13 @@ const HomePage = () => {
             <div key={idx} className="fleet-card">
               <div className="fleet-image">
                 {vehicle.alt === 'Tractor Trolley' ? (
-                  <img src={vehicle.src} alt={vehicle.alt} onError={handleImgError} />
+                  <img
+                    src={`${FRONTEND_SERVER}${vehicle.src}`}
+                    alt={vehicle.alt}
+                    onError={handleImgError}
+                  />
                 ) : (
-                  <img src={vehicle.src} alt={vehicle.alt} />
+                  <img src={`${FRONTEND_SERVER}${vehicle.src}`} alt={vehicle.alt} />
                 )}
                 <div className="fleet-caption">{vehicle.caption}</div>
               </div>
