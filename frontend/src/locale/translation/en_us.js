@@ -2,7 +2,7 @@ const lang = {
   sign_up: 'Sign Up',
   manage_your_company_with: 'Manage Your Company With',
   all_in_one_tool: 'All In One Tool',
-  run_and_scale_your_erp_crm_apps: 'Run And Scale Your Erp Crm Apps',
+  run_and_scale_your_erp_crm_apps: 'Run And Scale Your Nagpur Murum Depot Apps',
   easily_add_and_manage_your_services: 'Easily Add And Manage Your Services',
   it_brings_together_your_invoice_clients_and_leads:
     'It Brings Together Your Invoice Clients And Leads',
