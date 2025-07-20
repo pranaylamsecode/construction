@@ -19,15 +19,15 @@ const SERVICES = [
   'Bulk Orders for Contractors',
 ];
 
-// Use public folder path for images (assuming images are in public/images)
+// Use public folder path for images (images should be in public/images)
 const FLEET = [
   {
-    src: 'src/style/images/trolley-image.jpg',
+    src: '/src/style/images/trolleyimage.png',
     alt: 'Tractor Trolley',
     caption: 'Tractor Trolley – For flexible, smaller deliveries',
   },
   {
-    src: 'src/style/images/tipper-image.jpg',
+    src: '/src/style/images/tipperimage.png',
     alt: 'Tipper Truck',
     caption: 'Tipper Truck – For bulk, high-volume transport',
   },
@@ -51,7 +51,7 @@ const HomePage = () => {
     <main className="homepage">
       <section className="hero">
         <div className="hero-background" />
-        <img src="src/style/images/logo-icon.png" alt="Nagpur Murum Depot Logo" className="logo" />
+        <img src="/src/style/images/logo-icon.png" alt="Nagpur Murum Depot Logo" className="logo" />
         <h1 className="title">Nagpur Murum Depot</h1>
         <p className="subtitle">Reliable Earth Filling & Construction Material Supply</p>
         <div className="badges">
@@ -110,11 +110,7 @@ const HomePage = () => {
             <div key={idx} className="fleet-card">
               <div className="fleet-image">
                 {vehicle.alt === 'Tractor Trolley' ? (
-                  <img
-                    src={vehicle.src}
-                    alt={vehicle.alt}
-                    /* onError={handleImgError} */
-                  />
+                  <img src={vehicle.src} alt={vehicle.alt} onError={handleImgError} />
                 ) : (
                   <img src={vehicle.src} alt={vehicle.alt} />
                 )}
@@ -161,12 +157,14 @@ const HomePage = () => {
           opacity: 0.08;
           z-index: 0;
         }
+
         .logo {
-          max-width: 180px;
           margin: 0 auto 1rem;
           display: block;
           z-index: 1;
           position: relative;
+          width: 128px;
+          height: 100%;
         }
         .title {
           font-size: 2.3rem;
