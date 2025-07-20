@@ -28,7 +28,7 @@ export default function SideContent() {
           width={220}
         />
         <Title level={1} style={{ fontSize: 28 }}>
-          ERP / CRM
+          Nagpur Murum Depot
         </Title>
 
         <div className="space20"></div>
