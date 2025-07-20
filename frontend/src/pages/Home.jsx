@@ -187,8 +187,8 @@ const HomePage = () => {
           display: block;
           z-index: 1;
           position: relative;
-          width: 120px;
-          height: 120px;
+          width: 180px;
+          height: 180px;
           object-fit: contain;
           background: #fff;
           border-radius: 50%;
@@ -347,7 +347,7 @@ const HomePage = () => {
           overflow: hidden;
           background: linear-gradient(120deg, #fff 80%, #f3f4f6 100%);
           min-width: 240px;
-          max-width: 320px;
+          max-width: 420px;
           box-shadow: 0 2px 16px rgba(59, 130, 246, 0.07);
           display: flex;
           flex-direction: column;
@@ -356,7 +356,7 @@ const HomePage = () => {
 
         .fleet-image img {
           width: 100%;
-          height: 180px;
+          height: 300px;
           object-fit: cover;
           display: block;
           background: #f3f4f6;
@@ -447,14 +447,20 @@ const HomePage = () => {
             flex-direction: column;
             gap: 1.5rem;
           }
+          .fleet-card {
+            max-width: 98vw;
+          }
+          .fleet-image img {
+            height: 220px;
+          }
         }
         @media (max-width: 700px) {
           .hero {
             padding: 1.2rem 0.5rem 1rem 0.5rem;
           }
           .logo {
-            width: 80px;
-            height: 80px;
+            width: 120px;
+            height: 120px;
           }
           .title {
             font-size: 2rem;
@@ -507,7 +513,7 @@ const HomePage = () => {
             width: 100%;
           }
           .fleet-image img {
-            height: 120px;
+            height: 160px;
           }
           .fleet-caption {
             font-size: 0.98rem;
@@ -547,8 +553,8 @@ const HomePage = () => {
             padding: 0.7rem 0.2rem 0.7rem 0.2rem;
           }
           .logo {
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
           }
           .title {
             font-size: 1.3rem;
@@ -568,7 +574,7 @@ const HomePage = () => {
             max-width: 100vw;
           }
           .fleet-image img {
-            height: 80px;
+            height: 100px;
           }
         }
       `}</style>
